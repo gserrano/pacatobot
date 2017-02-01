@@ -1,5 +1,7 @@
 'use strict';
 
+/* Este arquivo deve ser renomeado para config.js */
+
 let config = {
 	auth: {
 		user: 'vendas@eucompraria.com.br',
