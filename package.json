@@ -1,0 +1,21 @@
+{
+  "name": "PacatoBot",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib",
+    "app" : "node lib/app.js"
+  },
+  "author": "@gserrano (http://guilhermeserrano.com.br/)",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "nightmare": "^2.9.1"
+  },
+  "dependencies": {
+    "nightmare": "^2.9.1"
+  }
+}
