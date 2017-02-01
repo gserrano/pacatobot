@@ -11,7 +11,7 @@ Para utilizar:
 ```sh
 $ npm install
 ```
-- Ajuste as configurações de acesso da sua conta PagSeguro em /lib/config.js
+- Ajuste as configurações de acesso da sua conta PagSeguro em /src/config.js
 - Compile
 ```sh
 $ npm run build
