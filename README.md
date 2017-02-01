@@ -12,11 +12,9 @@ Para utilizar:
 ```sh
 $ npm install
 ```
-<<<<<<< HEAD
-- Ajuste as configurações de acesso da sua conta PagSeguro em /lib/config.js
-=======
-- Ajuste as configurações de acesso da sua conta PagSeguro em /src/config.js
->>>>>>> ec3682b2a1a762878f53d8ec906c93276e4d302d
+
+- Ajuste as configurações de acesso da sua conta PagSeguro em /src/config.sample
+
 - Compile
 ```sh
 $ npm run build
@@ -27,11 +25,5 @@ $ npm run app
 ```
 ou
 ```sh
-<<<<<<< HEAD
 $ node lib/app.js
 ```
-=======
-$ node src/app.js
-```
-
->>>>>>> ec3682b2a1a762878f53d8ec906c93276e4d302d
