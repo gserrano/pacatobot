@@ -1,11 +1,11 @@
 'use strict';
 
-/* Este arquivo deve ser renomeado para config.js */
+/* Este arquivo deve ser alterado e renomeado para config.js */
 
 let config = {
 	auth: {
 		user: 'vendas@eucompraria.com.br',
-		password: 'Pecftw16O'
+		password: 'H!=:6=Sb.{{(TNp'
 	}
 };
 

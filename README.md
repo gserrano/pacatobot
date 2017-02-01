@@ -1,6 +1,6 @@
 # PacatoBot
 
-Pacatobot é um microbot que usa NodeJs (Nightmare) para solicitar automaticamente saques da sua conta no PagSeguro.
+Pacatobot é um microbot que usa NodeJs (NightmareJS) para solicitar automaticamente saques da sua conta no PagSeguro.
 
 ![Pacatobot](https://gserrano.github.io/assets/imgs/pacatobot.gif)
 
@@ -8,15 +8,13 @@ Pacatobot é um microbot que usa NodeJs (Nightmare) para solicitar automaticamen
 Para utilizar:
 
 - Faça clone do repositório
-- Instale as dependências com 
+- Instale as dependências 
 ```sh
 $ npm install
 ```
-<<<<<<< HEAD
-- Ajuste as configurações de acesso da sua conta PagSeguro em /lib/config.js
-=======
-- Ajuste as configurações de acesso da sua conta PagSeguro em /src/config.js
->>>>>>> ec3682b2a1a762878f53d8ec906c93276e4d302d
+
+- Ajuste as configurações de acesso da sua conta PagSeguro (deve estar em /src/config.js e o arquivo exemplo está em /src/config.sample)
+
 - Compile
 ```sh
 $ npm run build
@@ -27,11 +25,5 @@ $ npm run app
 ```
 ou
 ```sh
-<<<<<<< HEAD
 $ node lib/app.js
 ```
-=======
-$ node src/app.js
-```
-
->>>>>>> ec3682b2a1a762878f53d8ec906c93276e4d302d
