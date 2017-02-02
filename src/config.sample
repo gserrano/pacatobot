@@ -4,8 +4,8 @@
 
 let config = {
 	auth: {
-		user: 'vendas@eucompraria.com.br',
-		password: 'H!=:6=Sb.{{(TNp'
+		user: 'seu_user_name',
+		password: 'sua_senha'
 	}
 };
 
