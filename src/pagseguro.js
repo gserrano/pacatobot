@@ -1,9 +1,9 @@
-let Nightmare = require('nightmare')	
-	, nightmare = Nightmare({
-								show: false
-								, waitTimeout : 45000 // in ms
-								, typeInterval : 700
-						});
+let Nightmare = require('nightmare'),
+	nightmare = Nightmare({
+		show: false,
+		waitTimeout: 45000,
+		typeInterval: 700
+	});
 
 class Pagseguro {
 	constructor(config) {
@@ -12,26 +12,23 @@ class Pagseguro {
 	}
 
 	login(){
-		console.log('Efetuando login')
 		return new Promise((resolve, reject) => {
 			nightmare
 			.goto('https://pagseguro.uol.com.br')
-				.insert('#eml', this.user)
-				.insert('#pwd', this.password)
-				.click('#entrar')
-				.wait('#accountBalance')
-				.then(function(){
-					resolve();
-				})
-				.catch(function (error) {
-					console.error('Login failed:', error);
-					reject('Failed');
-				});
+			.insert('#eml', this.user)
+			.insert('#pwd', this.password)
+			.click('#entrar')
+			.wait('#accountBalance')
+			.then(() => {
+				resolve(this);
+			})
+			.catch( error => {
+				reject(error)
+			});
 		});
 	}
 
 	saque(){
-		console.log('Verificando saldo');
 
 		return new Promise((resolve, reject) => {
 			
