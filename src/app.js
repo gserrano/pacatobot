@@ -5,16 +5,24 @@ import Pagseguro from "./pagseguro.js";
 
 const pagseguro = new Pagseguro(config);
 
-pagseguro.login()
-	.then( logged => {
-		pagseguro.saque()
-			.then( () => {
-				console.log('Saque realizado');
-				process.exit();
-
-			})
-			.catch( () => {
-				console.log('Saque não realizado');
-				process.exit();
-			})
+const sacar = function(provider) {
+	console.log('Verificando saldo');
+	provider
+	.saque()
+	.then( () => {
+		console.log('Saque realizado');
 	})
+	.catch( error => {
+		console.warn('Saque não realizado');
+	})
+}
+
+console.log('Efetuando login')
+pagseguro
+.login()
+.then(sacar)
+.then( process.exit )
+.catch( err => {
+	console.error('Login failed:', err)
+	process.exit()
+})
