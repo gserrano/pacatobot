@@ -4,16 +4,29 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run coverage",
+    "coverage": "babel-node node_modules/.bin/babel-istanbul cover _mocha -- --timeout 30000 test/**/*.spec.js",
+    "test-unit": "mocha --compilers js:babel-core/register test/unit/**/*.spec.js",
+    "test-unit-watch": "mocha --watch --compilers js:babel-core/register test/unit/**/*.spec.js",
     "build": "babel src -d lib",
-    "app" : "node lib/app.js"
+    "app": "node lib/app.js"
   },
   "author": "@gserrano (http://guilhermeserrano.com.br/)",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.18.0",
+    "babel-istanbul": "^0.12.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
-    "nightmare": "^2.9.1"
+    "babel-register": "^6.22.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "eslint": "3.13.1",
+    "eslint-config-google": "0.7.1",
+    "isparta": "^4.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "3.2.0",
+    "nightmare": "^2.9.1",
+    "nock": "^9.0.2"
   },
   "dependencies": {
     "nightmare": "^2.9.1"

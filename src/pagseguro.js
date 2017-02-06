@@ -7,6 +7,11 @@ let Nightmare = require('nightmare'),
 
 class Pagseguro {
 	constructor(config) {
+
+		if(!config || !config.auth) {
+			throw Error('No config provided')
+		}
+
 		this.user = config.auth.user;
 		this.password = config.auth.password;
 	}
@@ -44,8 +49,7 @@ class Pagseguro {
 					console.log(`Seu saldo é R$ ${money}`);
 
 					if( parseFloat(money) <= 0){
-						console.error('Nada para sacar :(');
-						reject();
+						reject(new Error('Nada para sacar :('));
 						return;
 					}
 
@@ -57,7 +61,7 @@ class Pagseguro {
 						.end()
 						.catch(function (error) {
 							console.error('Solicitação falhou:', error);
-							reject();
+							reject(error);
 						});
 
 				})
